@@ -1,0 +1,51 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x56fbfac0eda0 .scope module, "xor_4bit_tb" "xor_4bit_tb" 2 2;
+ .timescale -9 -12;
+v0x56fbfac33b10_0 .var "A", 3 0;
+v0x56fbfac33c00_0 .var "B", 3 0;
+v0x56fbfac33cd0_0 .net "Y", 3 0, L_0x56fbfac33dd0;  1 drivers
+S_0x56fbfabe94c0 .scope module, "uut" "xor_4bit" 2 6, 3 1 0, S_0x56fbfac0eda0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 4 "Y";
+L_0x56fbfac33dd0 .functor XOR 4, v0x56fbfac33b10_0, v0x56fbfac33c00_0, C4<0000>, C4<0000>;
+v0x56fbfabe96f0_0 .net "A", 3 0, v0x56fbfac33b10_0;  1 drivers
+v0x56fbfac338f0_0 .net "B", 3 0, v0x56fbfac33c00_0;  1 drivers
+v0x56fbfac339d0_0 .net "Y", 3 0, L_0x56fbfac33dd0;  alias, 1 drivers
+    .scope S_0x56fbfac0eda0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "xor_4bit.vcd" {0 0 0};
+    %vpi_call 2 10 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x56fbfac0eda0 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x56fbfac33b10_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x56fbfac33c00_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x56fbfac33b10_0, 0, 4;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x56fbfac33c00_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x56fbfac33b10_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x56fbfac33c00_0, 0, 4;
+    %delay 10000, 0;
+    %vpi_call 2 15 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xor_4bit_tb.v";
+    "xor_4bit.v";

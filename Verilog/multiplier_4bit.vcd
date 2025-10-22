@@ -1,0 +1,49 @@
+$date
+	Mon Jul 21 19:06:12 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module multiplier_4bit_tb $end
+$var wire 4 ! Product [3:0] $end
+$var wire 4 " Overflow [3:0] $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$scope module uut $end
+$var wire 4 % A [3:0] $end
+$var wire 4 & B [3:0] $end
+$var wire 8 ' full_product [7:0] $end
+$var wire 4 ( Product [3:0] $end
+$var wire 4 ) Overflow [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b110 (
+b110 '
+b10 &
+b11 %
+b10 $
+b11 #
+b0 "
+b110 !
+$end
+#10000
+b1 !
+b1 (
+b1110 "
+b1110 )
+b1111 $
+b1111 &
+b11100001 '
+b1111 #
+b1111 %
+#20000

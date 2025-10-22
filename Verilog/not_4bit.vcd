@@ -1,0 +1,39 @@
+$date
+	Mon Jul 21 18:54:28 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module not_4bit_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 4 " A [3:0] $end
+$scope module uut $end
+$var wire 4 # A [3:0] $end
+$var wire 4 $ Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111 $
+b0 #
+b0 "
+b1111 !
+$end
+#10000
+b101 !
+b101 $
+b1010 "
+b1010 #
+#20000
+b0 !
+b0 $
+b1111 "
+b1111 #
+#30000
